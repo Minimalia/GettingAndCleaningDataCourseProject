@@ -57,12 +57,17 @@ The process to obtain the output tidy data set is the following:
 1.- Download and unzip the data set to your R working directory.
 
 2.- Install the following packages if needed:
+
 	  - data.table
+	  
 	  - dplyr
 	  
 3.- Download the following R scripts to R working directory:
+
 	  - run_analysis.R
+	  
 	  - readInertialDataSet.R
+	  
 	  - readDataSetContent.R
 	  
 4.- Execute "run_analysis.R" that performs the following operations:
@@ -104,6 +109,5 @@ OUTPUT DESCRIPTION
 The following code can be used to visualize the data in R after downloading 
 the file to R working directory:
 
-  tidydata <- read.table("HumanActivityRecognitionSummaryTidyDataSet", header = TRUE)
-  
-  View(tidydata)
+  	tidydata <- read.table("HumanActivityRecognitionSummaryTidyDataSet", header = TRUE)
+  	View(tidydata)
