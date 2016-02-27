@@ -3,12 +3,6 @@ Getting and Cleaning data course project
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
-README
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
-
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
 OBJECTIVE
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
@@ -54,7 +48,6 @@ Repository includes the following data:
 - README file:
 	- README.txt
 
-	
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 PROCESS AND SCRIPTS DESCRIPTION
@@ -73,24 +66,34 @@ The process to obtain the output tidy data set is the following:
 	  - readDataSetContent.R
 	  
 3.- Execute "run_analysis.R" that performs the following operations:
+    
 	  - Load required packages and source "readInertialDataSet.R"
 	  and "readDataSetContent.R" functions
+
 	  - Download the data set and unzip it in the folder "dataProject"
 	  that will be created, if it does not exist, in the current working 
 	  directory.
+
 	  - Read test and training data using the functions:
+	  
 		- readInertialDataSet.R: reads activity, subject and variable data
 			from the data set merging the information together in a single
 			data.table object. Notice that execution time is higher because
 			read.fwf function is used with buffer size set to 1 to avoid
 			memory problems.
+
 		- readDataSetContent.R: reads activity labels and variable names 
 			used for properly naming the data set
+
 	  - Merges test and training data in one data set
+	  
 	  - Extracts only measurements on the mean and standard deviation
+	  
 	  - Create a tidy data set that provides the average value of each variable
 	  for every activity and subject.
+
 	  - Saves the output data to a file using "write.table".
+	  
 	  - This script prints in R console information messages to be aware of
 	  the current operation being performed.
 	  
@@ -104,6 +107,7 @@ OUTPUT DESCRIPTION
 
 The following code can be used to visualize the data in R after downloading 
 the file to R working directory:
-  
+
   tidydata <- read.table("Step5-HumanActivityRecognitionSummaryTidyDataSet", header = TRUE)
+  
   View(tidydata)
