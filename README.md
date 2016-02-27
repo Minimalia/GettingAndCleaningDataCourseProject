@@ -17,8 +17,7 @@ This data was collected for the following Human Activity Recognition project:
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-The input data is downloaded automatically by the R scripts provided in this
-repository. The scripts should:
+The scripts should:
 
 1. Merge the training and the test sets to create one data set.
 2. Extract only the measurements on the mean and standard deviation for each measurement.
@@ -40,7 +39,7 @@ Repository includes the following data:
 	- readDataSetContent.R
 
 - Output tidy data set after processing input data:
-	- Step5-HumanActivityRecognitionSummaryTidyDataSet
+	- HumanActivityRecognitionSummaryTidyDataSet
 	
 - CODEBOOK that describe the variables of output tidy data set:
 	- CODEBOOK.txt
@@ -55,24 +54,21 @@ PROCESS AND SCRIPTS DESCRIPTION
 -------------------------------------------------------------------------------
 
 The process to obtain the output tidy data set is the following:
+1.- Download and unzip the data set to your R working directory.
 
-1.- Install the following packages if needed:
+2.- Install the following packages if needed:
 	  - data.table
 	  - dplyr
 	  
-2.- Download the following R scripts to R working directory:
+3.- Download the following R scripts to R working directory:
 	  - run_analysis.R
 	  - readInertialDataSet.R
 	  - readDataSetContent.R
 	  
-3.- Execute "run_analysis.R" that performs the following operations:
+4.- Execute "run_analysis.R" that performs the following operations:
     
 	  - Load required packages and source "readInertialDataSet.R"
 	  and "readDataSetContent.R" functions
-
-	  - Download the data set and unzip it in the folder "dataProject"
-	  that will be created, if it does not exist, in the current working 
-	  directory.
 
 	  - Read test and training data using the functions:
 	  
@@ -92,7 +88,7 @@ The process to obtain the output tidy data set is the following:
 	  - Create a tidy data set that provides the average value of each variable
 	  for every activity and subject.
 
-	  - Saves the output data to a file using "write.table".
+	  - Saves the output data to a txt file using "write.table" with row.name = FALSE.
 	  
 	  - This script prints in R console information messages to be aware of
 	  the current operation being performed.
@@ -103,11 +99,11 @@ OUTPUT DESCRIPTION
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 
-"Step5-HumanActivityRecognitionSummaryTidyDataSet" is built using write.table.
+"HumanActivityRecognitionSummaryTidyDataSet" is built using write.table.
 
 The following code can be used to visualize the data in R after downloading 
 the file to R working directory:
 
-  tidydata <- read.table("Step5-HumanActivityRecognitionSummaryTidyDataSet", header = TRUE)
+  tidydata <- read.table("HumanActivityRecognitionSummaryTidyDataSet", header = TRUE)
   
   View(tidydata)
